@@ -59,6 +59,11 @@ const education = [
     company: 'PIAP (Programa Inglés Abre Puertas)',
     position: 'CERTIFICATE OF COMPLETION A2',
     period: '2018',
+  },
+  {
+    company: 'Universidad del Bío-Bío',
+    position: 'Estudiante Ingeniería Civil Informática',
+    period: '2022 - En curso'
   }
 ];
 ---
@@ -147,20 +152,6 @@ const education = [
             {education.map(edu => (
               <ExperienceCard {...edu} />
             ))}
-          </div>
-          
-          <div>
-            <h2 class="text-2xl font-bold mb-6 text-primary">Educación Básica y Media</h2>
-            <ExperienceCard 
-              company="Liceo Industrial Metodista de Coronel" 
-              position="ENSEÑANZA MEDIA" 
-              period="2016-2019" 
-            />
-            <ExperienceCard 
-              company="Escuela N°37 Genaro Ríos Campos" 
-              position="ENSEÑANZA BÁSICA" 
-              period="2008-2015" 
-            />
           </div>
         </div>
       </div>
