@@ -12,8 +12,8 @@ Este es mi portafolio personal desarrollado con Astro y Tailwind CSS.
 
 1. Clona este repositorio
 ```bash
-git clone https://github.com/tu-usuario/portafolio-guillermo.git
-cd portafolio-guillermo
+git clone https://github.com/7ouzz-coder/7ouzz-coder.github.io.git
+cd 7ouzz-coder.github.io.git
 ```
 
 2. Instala las dependencias
