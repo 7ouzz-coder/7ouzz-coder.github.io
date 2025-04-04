@@ -7,31 +7,19 @@
     font-family: 'Inter', system-ui, sans-serif;
     scroll-behavior: smooth;
   }
-  
-  body {
-    @apply bg-light text-dark;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold text-primary;
-  }
-  
-  section {
-    @apply py-10;
-  }
 }
 
 @layer components {
-  .container {
-    @apply max-w-6xl mx-auto px-4;
-  }
-  
   .btn {
-    @apply inline-block px-6 py-3 rounded-md font-medium text-white bg-primary hover:bg-secondary transition-colors duration-300;
+    @apply inline-block px-6 py-3 rounded-md font-medium bg-primary text-white hover:bg-secondary transition-colors duration-300;
   }
   
   .section-title {
-    @apply text-3xl sm:text-4xl mb-8 border-b-2 border-primary pb-2 inline-block;
+    @apply text-3xl sm:text-4xl mb-8 border-b-2 border-primary pb-2 inline-block font-bold text-primary;
+  }
+  
+  .container {
+    @apply max-w-6xl mx-auto px-4;
   }
 }
 
