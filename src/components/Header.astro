@@ -1,8 +1,10 @@
 ---
+const baseUrl = import.meta.env.BASE_URL || '';
+
 const navItems = [
-  { title: 'Inicio', url: '/' },
-  { title: 'Sobre mí', url: '/about' },
-  { title: 'Proyectos', url: '/projects' }
+  { title: 'Inicio', url: `${baseUrl}/` },
+  { title: 'Sobre mí', url: `${baseUrl}/about` },
+  { title: 'Proyectos', url: `${baseUrl}/projects` }
 ];
 
 const currentPath = Astro.url.pathname;
