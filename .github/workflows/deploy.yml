@@ -29,6 +29,13 @@ jobs:
       - name: Build project
         run: npm run build
         
+      - name: Debug directory contents
+        run: |
+          echo "Current directory:"
+          ls -la
+          echo "Build output directory:"
+          ls -la dist || echo "dist directory does not exist"
+        
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
