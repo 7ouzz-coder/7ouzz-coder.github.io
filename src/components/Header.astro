@@ -2,13 +2,13 @@
 const baseUrl = import.meta.env.BASE_URL || '';
 
 const navItems = [
-  { title: 'Inicio', url: `${baseUrl}/` },
-  { title: 'Sobre mí', url: `${baseUrl}/about` },
-  { title: 'Proyectos', url: `${baseUrl}/projects` }
+  { title: 'Inicio', url: `/` },
+  { title: 'Sobre mí', url: `/about` },
+  { title: 'Proyectos', url: `/projects` }
 ];
 
 const currentPath = Astro.url.pathname;
----
+---     
 
 <header class="bg-white shadow-md sticky top-0 z-10">
   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
