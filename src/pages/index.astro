@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SkillBadge from '../components/SkillBadge.astro';
+
+const skills = [
+  'Desarrollo Web',
+  'Desarrollo de Apps',
+  'Python',
+  'HTML/CSS',
+  'JavaScript',
+  'Responsabilidad',
+  'Creatividad',
+  'Integridad',
+  'Trabajo en equipo',
+  'Competencias digitales',
+  'Comunicación'
+];
+---
+
+<Layout title="Guillermo Villar Pinto | Portafolio">
+  <!-- Hero Section -->
+  <section class="py-20 bg-gradient-to-b from-primary/5 to-white">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 md:pr-12 mb-8 md:mb-0">
+          <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-primary animate-on-scroll">
+            <span class="inline-block">¡Hola!</span>
+            <span class="inline-block ml-2">Soy Guillermo</span>
+          </h1>
+          <h2 class="text-2xl sm:text-3xl font-medium mb-6 text-secondary animate-on-scroll">
+            Desarrollador de Software
+          </h2>
+          <p class="text-gray-700 text-lg mb-8 animate-on-scroll">
+            Apasionado por el desarrollo de software, con interés en crear y mejorar todo tipo de aplicaciones. Actualmente estoy desarrollando apps tanto móviles como de escritorio para pymes y startups.
+          </p>
+          <div class="flex flex-wrap gap-4 animate-on-scroll">
+            <a href="/about" class="btn">
+              Conóceme
+            </a>
+            <a href="/projects" class="btn bg-secondary hover:bg-secondary/80">
+              Ver proyectos
+            </a>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <div class="bg-white p-3 rounded-full shadow-xl animate-on-scroll">
+            <img 
+              src="/images/profile.jpg" 
+              alt="Guillermo Villar Pinto" 
+              class="rounded-full w-64 h-64 mx-auto object-cover"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title text-center mx-auto">Mis Habilidades</h2>
+      <div class="flex flex-wrap justify-center mt-8">
+        {skills.map(skill => (
+          <SkillBadge skill={skill} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="py-20 bg-primary text-white text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white animate-on-scroll">¿Interesado en trabajar juntos?</h2>
+      <p class="text-lg mb-8 max-w-2xl mx-auto animate-on-scroll">
+        Estoy en búsqueda de nuevos desafíos para aplicar mis conocimientos, seguir aprendiendo y aportar valor a tu equipo.
+      </p>
+      <a href="mailto:Guillermo1858@gmail.com" class="btn bg-white text-primary hover:bg-gray-100 animate-on-scroll">
+        Contáctame
+      </a>
+    </div>
+  </section>
+</Layout>

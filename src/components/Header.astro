@@ -1,0 +1,36 @@
+---
+const navItems = [
+  { title: 'Inicio', url: '/' },
+  { title: 'Sobre mí', url: '/about' },
+  { title: 'Proyectos', url: '/projects' }
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="bg-white shadow-md sticky top-0 z-10">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="/" class="text-2xl font-bold text-primary">
+      Guillermo<span class="hidden sm:inline"> Villar Pinto</span>
+    </a>
+    
+    <nav>
+      <ul class="flex space-x-4 md:space-x-8">
+        {navItems.map(item => (
+          <li>
+            <a 
+              href={item.url} 
+              class={`font-medium hover:text-primary transition-colors duration-300 ${currentPath === item.url ? 'text-primary border-b-2 border-primary' : 'text-dark'}`}
+            >
+              {item.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    
+    <a href="mailto:Guillermo1858@gmail.com" class="hidden md:block btn">
+      Contactar
+    </a>
+  </div>
+</header>

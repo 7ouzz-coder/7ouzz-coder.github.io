@@ -1,0 +1,19 @@
+---
+export interface Props {
+  company: string;
+  position: string;
+  period: string;
+  description?: string;
+}
+
+const { company, position, period, description } = Astro.props;
+---
+
+<div class="mb-6 animate-on-scroll">
+  <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+    <h3 class="text-lg font-bold">{position}</h3>
+    <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">{period}</span>
+  </div>
+  <p class="text-primary font-medium mb-2">{company}</p>
+  {description && <p class="text-gray-700">{description}</p>}
+</div>
