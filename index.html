@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Codificación de caracteres -->
+    <meta charset="UTF-8">
+
+    <!-- Configuración de viewport para responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la página (aparece en la pestaña del navegador) -->
+    <title>Portafolio de Guillermo</title>
+
+    <!-- Descripción para motores de búsqueda -->
+    <meta name="description" content="Portafolio de Guillermo Villar - Desarrollador especializado en JavaScript y Flutter">
+
+    <!-- Palabras clave -->
+    <meta name="keywords" content="html5, css, javascript, flutter, dart, desarrollo web, desarrollador web, web developer, programador, react, nextjs">
+
+    <!-- Autor del documento -->
+    <meta name="author" content="Guillermo Villar">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Enlace al archivo de estilos CSS personalizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Portafolio de Guillermo Villar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre-mi">Sobre Mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyectos">Mis Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal con container de Bootstrap -->
+    <main class="container my-4">
+        <!-- Sección Sobre Mí -->
+        <section id="sobre-mi" class="seccion">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Sobre Mí</h2>
+                    <p>Soy un desarrollador full-stack junior con experiencia en el área.</p>
+
+                    <h3>Mis Habilidades</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="lista-habilidades">
+                                <li>JavaScript (ES6+)</li>
+                                <li>Flutter y Dart</li>
+                                <li>HTML5 y CSS3</li>
+                                <li>Desarrollo de aplicaciones móviles</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="lista-habilidades">
+                                <li>React y Next.js</li>
+                                <li>Desarrollo de landing pages</li>
+                                <li>Desarrollo web responsive</li>
+                                <li>Git y control de versiones</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Mis Proyectos -->
+        <section id="proyectos" class="seccion">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Mis Proyectos</h2>
+                    <p>A pesar de mi mediano tiempo he sido capaz de desarrollar diferentes soluciones tecnológicas a medida:</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">App móvil con Flutter</h5>
+                                    <p class="card-text">Aplicación multiplataforma con interfaz nativa</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Página web con React y Next.js</h5>
+                                    <p class="card-text">Sitio web moderno y optimizado para SEO</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dominio de HTML5 y CSS3</h5>
+                                    <p class="card-text">Interfaces responsive con HTML5 y CSS3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="seccion">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Contacto</h2>
+                    <p>Si estas interesado en mi trabajo, contactame.</p>
+                    
+                    <!-- Enlaces de redes sociales -->
+                    <p class="text-center my-3">
+                        <a href="https://www.linkedin.com/in/guillermo-villarp" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm me-2">LinkedIn</a>
+                        <a href="mailto:guillermo1858@gmail.com" class="btn btn-outline-secondary btn-sm">Email</a>
+                    </p>
+
+                    <!-- Formulario de contacto con Bootstrap -->
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <!-- Contenedor para mensajes -->
+                            <div id="mensaje-formulario"></div>
+                            
+                            <form action="/contact" method="POST" id="formulario-contacto">
+                                <!-- Campo de nombre -->
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre:</label>
+                                    <input 
+                                        type="text" 
+                                        class="form-control"
+                                        id="nombre" 
+                                        name="nombre" 
+                                        required 
+                                        placeholder="Tu nombre completo"
+                                    >
+                                </div>
+                                
+                                <!-- Campo de email -->
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Correo Electrónico:</label>
+                                    <input 
+                                        type="email" 
+                                        class="form-control"
+                                        id="email" 
+                                        name="email" 
+                                        required 
+                                        placeholder="tu@email.com"
+                                    >
+                                </div>
+
+                                <!-- Campo de asunto -->
+                                <div class="mb-3">
+                                    <label for="asunto" class="form-label">Asunto:</label>
+                                    <input 
+                                        type="text" 
+                                        class="form-control"
+                                        id="asunto" 
+                                        name="asunto" 
+                                        required 
+                                        placeholder="Motivo de tu mensaje"
+                                    >
+                                </div>
+                                
+                                <!-- Campo del mensaje -->
+                                <div class="mb-3">
+                                    <label for="mensaje" class="form-label">Mensaje:</label>
+                                    <textarea 
+                                        class="form-control"
+                                        id="mensaje" 
+                                        name="mensaje" 
+                                        rows="5" 
+                                        required 
+                                        placeholder="Escribe tu mensaje aquí..."
+                                    ></textarea>
+                                </div>
+                            
+                                <!-- Botones de acción -->
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                    <button type="reset" class="btn btn-secondary">Limpiar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-2">© 2025 Guillermo Villar. Todos los derechos reservados.</p>
+            <p class="mb-0">
+                <a href="mailto:guillermo1858@gmail.com" class="text-primary text-decoration-none">guillermo1858@gmail.com</a> | 
+                <a href="https://www.linkedin.com/in/guillermo-villarp" target="_blank" rel="noopener noreferrer" class="text-primary text-decoration-none">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- JavaScript personalizado -->
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
