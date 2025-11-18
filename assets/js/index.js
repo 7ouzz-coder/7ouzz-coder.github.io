@@ -1,6 +1,6 @@
 $(document).ready(() => {
     
-    // Validación del formulario con jQuery
+    // Validacion del formulario con jQuery
     $('#formulario-contacto').on('submit', (evento) => {
         
         // Prevenir el envío normal del formulario
